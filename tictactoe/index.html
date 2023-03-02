@@ -7,8 +7,11 @@
 		<title>Tic Tac Toe</title>
 		<link rel="stylesheet" href="style.css">
 	</head>
+<!-- Establishing the Markup - basically the structure in html -->
 	<body>
 		<div class="container"></div>
+		<h1>Tic-Tac-Toe</h1>
+		<div class="play-area">
 		<div id="block-0" class="block"></div>
 		<div id="block-1" class="block"></div>
 		<div id="block-2" class="block"></div>
@@ -18,6 +21,9 @@
 		<div id="block-6" class="block"></div>
 		<div id="block-7" class="block"></div>
 		<div id="block-8" class="block"></div>
+		<h2 id="winner"></h2>
+		<button onclick="reset_board()">RESET BOARD</button>
+		</div>
 		<script src="index.js"></script>
 	</body>
 </html>
