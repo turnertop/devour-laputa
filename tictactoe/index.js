@@ -9,8 +9,15 @@ let playBoard = ["", "", "", "", "", "", "", "", ""];
 
 const boardContainer = document.querySelector(".play-area");
 
+
+
+// thank sam altman for chatgpt otherwise average joe like me born weak born inferior can close the gap with laputas!!!!!
 const renderBoard = () => {
 	boardContainer.innerHTML = "";
+	playBoard((e, i) 
+
+
+
 	
 
 
@@ -18,7 +25,8 @@ const renderBoard = () => {
 
 
 
-
+// is it grippy?
+// is it pink?
 
 
 
