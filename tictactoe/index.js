@@ -3,9 +3,13 @@
 
 let playBoard = ["", "", "", "", "", "", "", "", ""];
 
+
+
+// template literals example
 const name = "John";
 const age = 25;
 // reviewing template literals to embed variables and expressions
+// the use of backticks ``
 const greeting = `Hello, my name is ${name} and I am ${age} years old.`;
 console.log(greeting);
 
@@ -31,25 +35,19 @@ array1.forEach(element => console.log(element));
 
 const renderBoard = () => {
 	boardContainer.innerHTML = "";
-
-
-}
-
-
-
+	playBoard.forEach((element, index) => {
+		boardContainer.innerHTML += `<div id="block_${i}" class="block" onclick="addPlayerMove(${i})">${play_board[i]}</div>`;
+		if (e == player || e == computer) {
+			document.querySelector(`#block_${i}`).classList.add("occupied");
+		}
+	});
+};
 
 // thank sam altman for chatgpt otherwise average joe like me born weak born inferior can close the gap with laputas!!!!!
 /*
 const renderBoard = () => {
 	boardContainer.innerHTML = "";
 	playBoard((e, i) => {
-		
-
-
-
-	
-
-
 };
 */
 /*
