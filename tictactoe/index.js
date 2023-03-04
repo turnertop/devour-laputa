@@ -2,6 +2,9 @@
 // fuck ima end up like frank this is too hard javascript is out of my forte for my brain omg omg omg im not a developer type guy im like just average joe
 
 
+const player = "O";
+const computer = "X";
+
 // the board has 9 spots because tictactoe has 9 spots/blocks/squares
 // it starts a 0-8 because for some reason coding starts at 0 like the binaries like 0 to 1 like weird people fucking nerds i hate those techies those nerds im like kalanick loyalist
 let playBoard = ["", "", "", "", "", "", "", "", ""];
@@ -39,21 +42,19 @@ array1.forEach(element => console.log(element));
 const renderBoard = () => {
 	boardContainer.innerHTML = "";
 	playBoard.forEach((element, index) => {
-		boardContainer.innerHTML += `<div id="block-${i}" class="block" onclick="addPlayerMove(${i})">${playBoard[i]}</div>`;
-		if (e == player || e == computer) {
-			document.querySelector(`#block_${i}`).classList.add("occupied");
+		boardContainer.innerHTML += `<div id="block-${index}" class="block" onclick="addPlayerMove(${index})">${playBoard[index]}</div>`;
+		if (element == player || element == computer) {
+			document.querySelector(`#block_${index}`).classList.add("occupied");
 		}
 	});
 };
 
 renderBoard();
 
-const player = "O";
-const computer = "X";
 
-const addPlayerMove = e => {
-	if (playBoard[e] == "") {
-		playBoard[e] = player;
+const addPlayerMove = element => {
+	if (playBoard[element] == "") {
+		playBoard[element] = player;
 		renderBoard();
 		addComputerMove();
 	}
