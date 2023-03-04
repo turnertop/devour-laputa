@@ -44,12 +44,11 @@ const renderBoard = () => {
 	playBoard.forEach((element, index) => {
 		boardContainer.innerHTML += `<div id="block-${index}" class="block" onclick="addPlayerMove(${index})">${playBoard[index]}</div>`;
 		if (element == player || element == computer) {
-			document.querySelector(`#block_${index}`).classList.add("occupied");
+			document.querySelector(`#block-${index}`).classList.add("occupied");
 		}
 	});
 };
 
-renderBoard();
 
 
 const addPlayerMove = element => {
@@ -63,14 +62,14 @@ const addPlayerMove = element => {
 const addComputerMove = () => {
   do {
     selected = Math.floor(Math.random() * 9);
-  } while (play_board[selected] != "");
-  play_board[selected] = computer;
-  render_board();
+  } while (playBoard[selected] != "");
+  playBoard[selected] = computer;
+  renderBoard();
 };
 
 
 
-
+renderBoard();
 
 // thank sam altman for chatgpt otherwise average joe like me born weak born inferior can close the gap with laputas!!!!!
 /*
