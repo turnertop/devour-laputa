@@ -1,6 +1,9 @@
 // so if i make tictactoe game i wont end up like ....
 // fuck ima end up like frank this is too hard javascript is out of my forte for my brain omg omg omg im not a developer type guy im like just average joe
 
+
+// the board has 9 spots because tictactoe has 9 spots/blocks/squares
+// it starts a 0-8 because for some reason coding starts at 0 like the binaries like 0 to 1 like weird people fucking nerds i hate those techies those nerds im like kalanick loyalist
 let playBoard = ["", "", "", "", "", "", "", "", ""];
 
 
@@ -36,12 +39,37 @@ array1.forEach(element => console.log(element));
 const renderBoard = () => {
 	boardContainer.innerHTML = "";
 	playBoard.forEach((element, index) => {
-		boardContainer.innerHTML += `<div id="block_${i}" class="block" onclick="addPlayerMove(${i})">${play_board[i]}</div>`;
+		boardContainer.innerHTML += `<div id="block-${i}" class="block" onclick="addPlayerMove(${i})">${playBoard[i]}</div>`;
 		if (e == player || e == computer) {
 			document.querySelector(`#block_${i}`).classList.add("occupied");
 		}
 	});
 };
+
+renderBoard();
+
+const player = "O";
+const computer = "X";
+
+const addPlayerMove = e => {
+	if (playBoard[e] == "") {
+		playBoard[e] = player;
+		renderBoard();
+		addComputerMove();
+	}
+};
+
+const addComputerMove = () => {
+  do {
+    selected = Math.floor(Math.random() * 9);
+  } while (play_board[selected] != "");
+  play_board[selected] = computer;
+  render_board();
+};
+
+
+
+
 
 // thank sam altman for chatgpt otherwise average joe like me born weak born inferior can close the gap with laputas!!!!!
 /*
